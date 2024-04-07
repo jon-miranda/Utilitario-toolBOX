@@ -54,6 +54,7 @@
             panel2 = new Panel();
             label4 = new Label();
             panel3 = new Panel();
+            barraStatus = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -156,6 +157,7 @@
             button13.Text = "PL/SQL";
             button13.TextAlign = ContentAlignment.MiddleRight;
             button13.UseVisualStyleBackColor = true;
+            button13.Click += button13_Click;
             // 
             // button14
             // 
@@ -400,17 +402,30 @@
             // 
             panel3.Controls.Add(label4);
             panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 469);
+            panel3.Location = new Point(0, 487);
             panel3.Name = "panel3";
             panel3.Size = new Size(340, 20);
             panel3.TabIndex = 46;
+            // 
+            // barraStatus
+            // 
+            barraStatus.BorderStyle = BorderStyle.None;
+            barraStatus.Dock = DockStyle.Bottom;
+            barraStatus.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            barraStatus.ForeColor = Color.DodgerBlue;
+            barraStatus.Location = new Point(0, 463);
+            barraStatus.Name = "barraStatus";
+            barraStatus.Size = new Size(340, 24);
+            barraStatus.TabIndex = 47;
+            barraStatus.TextAlign = HorizontalAlignment.Center;
             // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(340, 489);
+            ClientSize = new Size(340, 507);
+            Controls.Add(barraStatus);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(label3);
@@ -487,5 +502,6 @@
         private Panel panel2;
         private Label label4;
         private Panel panel3;
+        private TextBox barraStatus;
     }
 }
