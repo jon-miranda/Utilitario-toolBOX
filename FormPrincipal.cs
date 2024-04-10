@@ -1,14 +1,26 @@
+using System;
 using System.Configuration;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
+using static System.Windows.Forms.Design.AxImporter;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
+using Timer = System.Windows.Forms.Timer;
 
 namespace Teste_de_funcionalidades
 {
+
+
     public partial class FormPrincipal : Form
     {
-        string app6;
+        private IWebDriver driver; // Declare uma instância global do IWebDriver
+
         string caminho1 = ConfigurationManager.AppSettings["caminho7"];
         string caminho2 = ConfigurationManager.AppSettings["caminho7"];
         string caminho3 = ConfigurationManager.AppSettings["caminho7"];
@@ -20,6 +32,7 @@ namespace Teste_de_funcionalidades
         public FormPrincipal()
         {
             InitializeComponent();
+
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
@@ -611,6 +624,279 @@ namespace Teste_de_funcionalidades
 
 
         }
-    }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FormPrincipal_MouseDown(object sender, MouseEventArgs e)
+        {
+
+
+        }
+
+        private void FormPrincipal_MouseMove(object sender, MouseEventArgs e)
+        {
+        }
+
+        private void FormPrincipal_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+        private void MoveFormSmoothly(Point newLocation)
+        {
+
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            IWebDriver driver = new ChromeDriver();
+
+            // Navega até o site
+            driver.Navigate().GoToUrl("http://aplicacoes.socin.com.br/login.html?lang=portuguese");
+
+            // Encontra os campos de login e senha e insere os valores
+            IWebElement campoLogin = driver.FindElement(By.Id("username_val"));
+            campoLogin.SendKeys("raphanet.parc");
+
+            IWebElement campoSenha = driver.FindElement(By.Id("password_val"));
+            campoSenha.SendKeys("TTF6DRTFb9");
+
+            // Encontra o botão de login pela classe e clica nele
+            IWebElement botaoLogin = driver.FindElement(By.CssSelector(".button.is-info.is-fullwidth"));
+            botaoLogin.Click();
+
+            // Aguarda até que a página seja carregada
+            driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
+
+            // Navega para uma página específica após o login
+            driver.Navigate().GoToUrl("http://aplicacoes.socin.com.br/main.html");
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            IWebDriver driver = new ChromeDriver();
+
+            // Navega até o site
+            driver.Navigate().GoToUrl("http://aplicacoes.socin.com.br/login.html?lang=portuguese");
+
+            // Encontra os campos de login e senha e insere os valores
+            IWebElement campoLogin = driver.FindElement(By.Id("username_val"));
+            campoLogin.SendKeys("raphanet.parc");
+
+            IWebElement campoSenha = driver.FindElement(By.Id("password_val"));
+            campoSenha.SendKeys("TTF6DRTFb9");
+
+            // Encontra o botão de login pela classe e clica nele
+            IWebElement botaoLogin = driver.FindElement(By.CssSelector(".button.is-info.is-fullwidth"));
+            botaoLogin.Click();
+
+            // Aguarda até que a página seja carregada
+            driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
+
+            // Navega para uma página específica após o login
+            driver.Navigate().GoToUrl("http://aplicacoes.socin.com.br/main.html");
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+
+
+            if (driver == null)
+            {
+
+                ChromeOptions options = new ChromeOptions();
+                options.AddArguments("start-maximized"); // Maximiza a janela do navegador
+                driver = new ChromeDriver(options);
+
+                driver.Navigate().GoToUrl("https://dbeaver.io/files/dbeaver-ce-latest-x86_64-setup.exe");
+                driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
+
+            }
+            else
+            {
+
+                // Abre uma nova aba e navega para a página 2
+                IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+                js.ExecuteScript("window.open('https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.80-installer.msi');");
+
+                driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
+
+            }
+        }
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+
+            if (driver == null)
+            {
+
+                ChromeOptions options = new ChromeOptions();
+                options.AddArguments("start-maximized"); // Maximiza a janela do navegador
+                driver = new ChromeDriver(options);
+
+                try
+                {
+                    driver.Navigate().GoToUrl("http://aplicacoes.socin.com.br/login.html?lang=portuguese");
+
+                    IWebElement campoLogin = driver.FindElement(By.Id("username_val"));
+                    campoLogin.SendKeys("raphanet.parc");
+
+                    IWebElement campoSenha = driver.FindElement(By.Id("password_val"));
+                    campoSenha.SendKeys("TTF6DRTFb9");
+
+                    IWebElement botaoLogin = driver.FindElement(By.CssSelector(".button.is-info.is-fullwidth"));
+                    botaoLogin.Click();
+                    driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
+
+                    driver.Navigate().GoToUrl("http://aplicacoes.socin.com.br/main.html");
+                    driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
+
+                    IWebElement botaoAplicativos = driver.FindElement(By.Name("aplicativos"));
+                    botaoAplicativos.Click();
+
+                }
+                catch
+                {
+                    MessageBox.Show("Página de login não encontrada");
+                }
+
+            }
+
+            else
+            {
+                //IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+                //js.ExecuteScript("window.open('http://aplicacoes.socin.com.br/login.html?lang=portuguese');");
+
+                //try
+                //{
+
+                //    IWebElement campoLogin = driver.FindElement(By.Id("username_val"));
+                //    campoLogin.SendKeys("raphanet.parc");
+
+                //    IWebElement campoSenha = driver.FindElement(By.Id("password_val"));
+                //    campoSenha.SendKeys("TTF6DRTFb9");
+
+                //    IWebElement botaoLogin = driver.FindElement(By.CssSelector(".button.is-info.is-fullwidth"));
+                //    botaoLogin.Click();
+                //}
+                //catch
+                //{
+                //    MessageBox.Show("Página de login não encontrada");
+                //}
+                //js.ExecuteScript("window.open('http://aplicacoes.socin.com.br/main.html');");
+
+                //driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
+            }
+
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            IWebDriver driver = new ChromeDriver();
+
+            // Navega até o site
+            driver.Navigate().GoToUrl("http://aplicacoes.socin.com.br/login.html?lang=portuguese");
+
+            // Encontra os campos de login e senha e insere os valores
+            IWebElement campoLogin = driver.FindElement(By.Id("username_val"));
+            campoLogin.SendKeys("raphanet.parc");
+
+            IWebElement campoSenha = driver.FindElement(By.Id("password_val"));
+            campoSenha.SendKeys("TTF6DRTFb9");
+
+            // Encontra o botão de login pela classe e clica nele
+            IWebElement botaoLogin = driver.FindElement(By.CssSelector(".button.is-info.is-fullwidth"));
+            botaoLogin.Click();
+
+            // Aguarda até que a página seja carregada
+            driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
+
+            // Navega para uma página específica após o login
+            driver.Navigate().GoToUrl("http://aplicacoes.socin.com.br/main.html");
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            //IWebDriver driver = new ChromeDriver();
+
+            if (driver == null)
+            {
+
+                ChromeOptions options = new ChromeOptions();
+                options.AddArguments("start-maximized"); // Maximiza a janela do navegador
+                driver = new ChromeDriver(options);
+
+                driver.Navigate().GoToUrl("https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.80-installer.msi");
+                driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
+            }
+            else
+            {
+
+                // Abre uma nova aba e navega para a página 2
+                IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+                js.ExecuteScript("window.open('https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.80-installer.msi');");
+
+                driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
+
+            }
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            IWebDriver driver = new ChromeDriver();
+
+            // Navega até o site
+            driver.Navigate().GoToUrl("http://aplicacoes.socin.com.br/login.html?lang=portuguese");
+
+            // Encontra os campos de login e senha e insere os valores
+            IWebElement campoLogin = driver.FindElement(By.Id("username_val"));
+            campoLogin.SendKeys("raphanet.parc");
+
+            IWebElement campoSenha = driver.FindElement(By.Id("password_val"));
+            campoSenha.SendKeys("TTF6DRTFb9");
+
+            // Encontra o botão de login pela classe e clica nele
+            IWebElement botaoLogin = driver.FindElement(By.CssSelector(".button.is-info.is-fullwidth"));
+            botaoLogin.Click();
+
+            // Aguarda até que a página seja carregada
+            driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
+
+            // Navega para uma página específica após o login
+            driver.Navigate().GoToUrl("http://aplicacoes.socin.com.br/main.html");
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            if (driver == null)
+            {
+
+                ChromeOptions options = new ChromeOptions();
+                options.AddArguments("start-maximized"); // Maximiza a janela do navegador
+                driver = new ChromeDriver(options);
+
+                driver.Navigate().GoToUrl("https://mt.lv/winbox64");
+                driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
+            }
+            else
+            {
+
+                // Abre uma nova aba e navega para a página 2
+                IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+                js.ExecuteScript("window.open('https://mt.lv/winbox64');");
+
+                driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
+
+            }
+
+        }
+    }
 }
+
+
+
+
