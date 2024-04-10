@@ -721,7 +721,7 @@ namespace Teste_de_funcionalidades
 
                 // Abre uma nova aba e navega para a página 2
                 IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
-                js.ExecuteScript("window.open('https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.80-installer.msi');");
+                js.ExecuteScript("window.open('https://dbeaver.io/files/dbeaver-ce-latest-x86_64-setup.exe');");
 
                 driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
 
