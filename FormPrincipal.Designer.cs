@@ -63,6 +63,7 @@
             button6 = new Button();
             button7 = new Button();
             button8 = new Button();
+            button17 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -355,7 +356,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.LightSkyBlue;
+            panel1.BackColor = SystemColors.Highlight;
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
@@ -393,7 +394,7 @@
             panel2.BackColor = Color.Gainsboro;
             panel2.Location = new Point(182, 105);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1, 335);
+            panel2.Size = new Size(1, 380);
             panel2.TabIndex = 44;
             // 
             // label4
@@ -406,13 +407,13 @@
             label4.Name = "label4";
             label4.Size = new Size(191, 17);
             label4.TabIndex = 45;
-            label4.Text = "MiranDev ToolBOX versão 1.0.0";
+            label4.Text = "MiranDev ToolBOX versão 1.0.2";
             // 
             // panel3
             // 
             panel3.Controls.Add(label4);
             panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 487);
+            panel3.Location = new Point(0, 502);
             panel3.Name = "panel3";
             panel3.Size = new Size(484, 20);
             panel3.TabIndex = 46;
@@ -432,7 +433,7 @@
             panel4.BackColor = Color.Gainsboro;
             panel4.Location = new Point(336, 105);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1, 335);
+            panel4.Size = new Size(1, 380);
             panel4.TabIndex = 45;
             // 
             // button2
@@ -505,12 +506,30 @@
             button8.UseVisualStyleBackColor = true;
             button8.Click += button8_Click_1;
             // 
+            // button17
+            // 
+            button17.Cursor = Cursors.Hand;
+            button17.FlatAppearance.BorderSize = 0;
+            button17.FlatAppearance.MouseOverBackColor = Color.LightSkyBlue;
+            button17.FlatStyle = FlatStyle.Flat;
+            button17.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button17.Image = (Image)resources.GetObject("button17.Image");
+            button17.ImageAlign = ContentAlignment.MiddleLeft;
+            button17.Location = new Point(12, 449);
+            button17.Name = "button17";
+            button17.Size = new Size(111, 37);
+            button17.TabIndex = 56;
+            button17.Text = "FTP";
+            button17.UseVisualStyleBackColor = true;
+            button17.Click += button17_Click;
+            // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(484, 507);
+            ClientSize = new Size(484, 522);
+            Controls.Add(button17);
             Controls.Add(button8);
             Controls.Add(button7);
             Controls.Add(button6);
@@ -546,7 +565,6 @@
             KeyPreview = true;
             Name = "FormPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
-            Load += Form1_Load;
             MouseDown += FormPrincipal_MouseDown;
             MouseMove += FormPrincipal_MouseMove;
             MouseUp += FormPrincipal_MouseUp;
@@ -608,5 +626,6 @@
         private Button button6;
         private Button button7;
         private Button button8;
+        private Button button17;
     }
 }

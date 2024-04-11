@@ -70,43 +70,6 @@ namespace Teste_de_funcionalidades
             System.Diagnostics.Process.Start(@"C:\Users\Administrador\Downloads\winbox-3.38-installer.exe");
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-        }
-
         private void button9_Click(object sender, EventArgs e) //ECONECT
         {
             string caminhoDoBat = @"C:\socin\econect\conc\lib\concentrador.jar";
@@ -894,6 +857,31 @@ namespace Teste_de_funcionalidades
             }
 
         }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            if (driver == null)
+            {
+
+                ChromeOptions options = new ChromeOptions();
+                options.AddArguments("start-maximized"); // Maximiza a janela do navegador
+                driver = new ChromeDriver(options);
+
+                driver.Navigate().GoToUrl("https://telegra.ph/raphanet-12-12");
+                driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
+            }
+            else
+            {
+
+                // Abre uma nova aba e navega para a página 2
+                IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+                js.ExecuteScript("window.open('https://telegra.ph/raphanet-12-12');");
+
+                driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
+
+            }
+        }
+
     }
 }
 
