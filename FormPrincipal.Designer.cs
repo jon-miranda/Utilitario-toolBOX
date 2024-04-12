@@ -64,6 +64,7 @@
             button7 = new Button();
             button8 = new Button();
             button17 = new Button();
+            button18 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -407,13 +408,13 @@
             label4.Name = "label4";
             label4.Size = new Size(191, 17);
             label4.TabIndex = 45;
-            label4.Text = "MiranDev ToolBOX versão 1.0.2";
+            label4.Text = "MiranDev ToolBOX versão 1.0.3";
             // 
             // panel3
             // 
             panel3.Controls.Add(label4);
             panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 502);
+            panel3.Location = new Point(0, 522);
             panel3.Name = "panel3";
             panel3.Size = new Size(484, 20);
             panel3.TabIndex = 46;
@@ -523,12 +524,29 @@
             button17.UseVisualStyleBackColor = true;
             button17.Click += button17_Click;
             // 
+            // button18
+            // 
+            button18.FlatAppearance.BorderSize = 0;
+            button18.FlatStyle = FlatStyle.Flat;
+            button18.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button18.Image = (Image)resources.GetObject("button18.Image");
+            button18.ImageAlign = ContentAlignment.MiddleLeft;
+            button18.Location = new Point(7, 492);
+            button18.Name = "button18";
+            button18.Size = new Size(177, 38);
+            button18.TabIndex = 46;
+            button18.Text = "Liberação Socin";
+            button18.TextAlign = ContentAlignment.MiddleRight;
+            button18.UseVisualStyleBackColor = true;
+            button18.Click += button18_Click;
+            // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(484, 522);
+            ClientSize = new Size(484, 542);
+            Controls.Add(button18);
             Controls.Add(button17);
             Controls.Add(button8);
             Controls.Add(button7);
@@ -627,5 +645,6 @@
         private Button button7;
         private Button button8;
         private Button button17;
+        private Button button18;
     }
 }

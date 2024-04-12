@@ -12,10 +12,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <COMReference Include="AutoItX3Lib">
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>f8937e53-d444-4e71-9275-35b64210cc3b</Guid>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="toolbox_Arj_icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoItX.Dotnet" Version="3.3.14.5" />
     <PackageReference Include="Selenium.WebDriver" Version="4.19.0" />
   </ItemGroup>
 
@@ -32,6 +45,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Administrador\.nuget\packages\autoitx.dotnet\3.3.14.5\build\AutoItX3_x64.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Administrador\.nuget\packages\autoitx.dotnet\3.3.14.5\build\AutoItX3.dll" />
   </ItemGroup>
 
 </Project>
