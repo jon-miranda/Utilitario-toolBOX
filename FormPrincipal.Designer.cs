@@ -408,7 +408,7 @@
             label4.Name = "label4";
             label4.Size = new Size(191, 17);
             label4.TabIndex = 45;
-            label4.Text = "MiranDev ToolBOX versão 1.0.3";
+            label4.Text = "MiranDev ToolBOX versão 1.0.4";
             // 
             // panel3
             // 

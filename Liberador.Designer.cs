@@ -40,6 +40,7 @@
             // 
             // txtCnpj
             // 
+            txtCnpj.Cursor = Cursors.IBeam;
             txtCnpj.Location = new Point(77, 51);
             txtCnpj.Name = "txtCnpj";
             txtCnpj.Size = new Size(147, 23);
@@ -58,6 +59,7 @@
             // btnBaixar
             // 
             btnBaixar.BackColor = SystemColors.Highlight;
+            btnBaixar.Cursor = Cursors.Hand;
             btnBaixar.FlatAppearance.BorderSize = 0;
             btnBaixar.FlatStyle = FlatStyle.Flat;
             btnBaixar.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -73,6 +75,7 @@
             // button1
             // 
             button1.BackColor = SystemColors.Highlight;
+            button1.Cursor = Cursors.Hand;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
