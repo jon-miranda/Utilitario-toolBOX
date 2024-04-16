@@ -19,7 +19,7 @@ namespace Teste_de_funcionalidades
 
     public partial class FormPrincipal : Form
     {
-        private IWebDriver driver; // Declare uma inst‚ncia global do IWebDriver
+        private IWebDriver driver; // Declare uma inst√¢ncia global do IWebDriver
 
         string caminho1 = ConfigurationManager.AppSettings["caminho7"];
         string caminho2 = ConfigurationManager.AppSettings["caminho7"];
@@ -161,7 +161,7 @@ namespace Teste_de_funcionalidades
 
                 catch
                 {
-                    MessageBox.Show("Caminho n„o encontrado!");
+                    MessageBox.Show("Caminho n√£o encontrado!");
                 }
         }
 
@@ -187,7 +187,7 @@ namespace Teste_de_funcionalidades
 
                 catch
                 {
-                    MessageBox.Show("Caminho n„o encontrado!");
+                    MessageBox.Show("Caminho n√£o encontrado!");
                 }
 
 
@@ -214,7 +214,7 @@ namespace Teste_de_funcionalidades
 
                 catch
                 {
-                    MessageBox.Show("Caminho n„o encontrado!");
+                    MessageBox.Show("Caminho n√£o encontrado!");
                 }
         }
 
@@ -240,7 +240,7 @@ namespace Teste_de_funcionalidades
 
                 catch
                 {
-                    MessageBox.Show("Caminho n„o encontrado!");
+                    MessageBox.Show("Caminho n√£o encontrado!");
                 }
         }
 
@@ -266,7 +266,7 @@ namespace Teste_de_funcionalidades
 
                 catch
                 {
-                    MessageBox.Show("Caminho n„o encontrado!");
+                    MessageBox.Show("Caminho n√£o encontrado!");
                 }
 
 
@@ -293,7 +293,7 @@ namespace Teste_de_funcionalidades
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                // Salva o caminho do arquivo selecionado no arquivo de configuraÁ„o
+                // Salva o caminho do arquivo selecionado no arquivo de configura√ß√£o
                 Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
                 config.AppSettings.Settings["caminho1"].Value = openFileDialog.FileName;
                 config.Save(ConfigurationSaveMode.Modified);
@@ -308,7 +308,7 @@ namespace Teste_de_funcionalidades
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                // Salva o caminho do arquivo selecionado no arquivo de configuraÁ„o
+                // Salva o caminho do arquivo selecionado no arquivo de configura√ß√£o
                 Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
                 config.AppSettings.Settings["caminho2"].Value = openFileDialog.FileName;
                 config.Save(ConfigurationSaveMode.Modified);
@@ -340,7 +340,7 @@ namespace Teste_de_funcionalidades
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                // Salva o caminho do arquivo selecionado no arquivo de configuraÁ„o
+                // Salva o caminho do arquivo selecionado no arquivo de configura√ß√£o
                 Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
                 config.AppSettings.Settings["caminho3"].Value = openFileDialog.FileName;
                 config.Save(ConfigurationSaveMode.Modified);
@@ -372,7 +372,7 @@ namespace Teste_de_funcionalidades
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                // Salva o caminho do arquivo selecionado no arquivo de configuraÁ„o
+                // Salva o caminho do arquivo selecionado no arquivo de configura√ß√£o
                 Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
                 config.AppSettings.Settings["caminho4"].Value = openFileDialog.FileName;
                 config.Save(ConfigurationSaveMode.Modified);
@@ -404,7 +404,7 @@ namespace Teste_de_funcionalidades
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                // Salva o caminho do arquivo selecionado no arquivo de configuraÁ„o
+                // Salva o caminho do arquivo selecionado no arquivo de configura√ß√£o
                 Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
                 config.AppSettings.Settings["caminho5"].Value = openFileDialog.FileName;
                 config.Save(ConfigurationSaveMode.Modified);
@@ -436,7 +436,7 @@ namespace Teste_de_funcionalidades
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                // Salva o caminho do arquivo selecionado no arquivo de configuraÁ„o
+                // Salva o caminho do arquivo selecionado no arquivo de configura√ß√£o
                 Configuration config6 = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
                 config6.AppSettings.Settings["caminho6"].Value = openFileDialog.FileName;
                 config6.Save(ConfigurationSaveMode.Modified);
@@ -468,7 +468,7 @@ namespace Teste_de_funcionalidades
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                // Salva o caminho do arquivo selecionado no arquivo de configuraÁ„o
+                // Salva o caminho do arquivo selecionado no arquivo de configura√ß√£o
                 Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
                 config.AppSettings.Settings["caminho7"].Value = openFileDialog.FileName;
                 config.Save(ConfigurationSaveMode.Modified);
@@ -499,7 +499,7 @@ namespace Teste_de_funcionalidades
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                // Salva o caminho do arquivo selecionado no arquivo de configuraÁ„o
+                // Salva o caminho do arquivo selecionado no arquivo de configura√ß√£o
                 Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
                 config.AppSettings.Settings["caminho8"].Value = openFileDialog.FileName;
                 config.Save(ConfigurationSaveMode.Modified);
@@ -548,7 +548,7 @@ namespace Teste_de_funcionalidades
 
                 catch
                 {
-                    MessageBox.Show("Caminho n„o encontrado!");
+                    MessageBox.Show("Caminho n√£o encontrado!");
                 }
 
 
@@ -582,7 +582,7 @@ namespace Teste_de_funcionalidades
 
                 catch
                 {
-                    MessageBox.Show("Caminho n„o encontrado!");
+                    MessageBox.Show("Caminho n√£o encontrado!");
                 }
 
 
@@ -616,7 +616,7 @@ namespace Teste_de_funcionalidades
         {
             IWebDriver driver = new ChromeDriver();
 
-            // Navega atÈ o site
+            // Navega at√© o site
             driver.Navigate().GoToUrl("http://aplicacoes.socin.com.br/login.html?lang=portuguese");
 
             // Encontra os campos de login e senha e insere os valores
@@ -624,16 +624,16 @@ namespace Teste_de_funcionalidades
             campoLogin.SendKeys("raphanet.parc");
 
             IWebElement campoSenha = driver.FindElement(By.Id("password_val"));
-            campoSenha.SendKeys("TTF6DRTFb9");
+            campoSenha.SendKeys("");
 
-            // Encontra o bot„o de login pela classe e clica nele
+            // Encontra o bot√£o de login pela classe e clica nele
             IWebElement botaoLogin = driver.FindElement(By.CssSelector(".button.is-info.is-fullwidth"));
             botaoLogin.Click();
 
-            // Aguarda atÈ que a p·gina seja carregada
+            // Aguarda at√© que a p√°gina seja carregada
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
 
-            // Navega para uma p·gina especÌfica apÛs o login
+            // Navega para uma p√°gina espec√≠fica ap√≥s o login
             driver.Navigate().GoToUrl("http://aplicacoes.socin.com.br/main.html");
 
         }
@@ -662,7 +662,7 @@ namespace Teste_de_funcionalidades
             //else
             //{
 
-            //    // Abre uma nova aba e navega para a p·gina 2
+            //    // Abre uma nova aba e navega para a p√°gina 2
             //    IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
             //    js.ExecuteScript("window.open('https://dbeaver.io/files/dbeaver-ce-latest-x86_64-setup.exe');");
 
@@ -690,7 +690,7 @@ namespace Teste_de_funcionalidades
             else
             {
 
-                // Abre uma nova aba e navega para a p·gina 2
+                // Abre uma nova aba e navega para a p√°gina 2
                 IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
                 js.ExecuteScript("window.open('https://dbeaver.io/files/dbeaver-ce-latest-x86_64-setup.exe');");
 
@@ -731,7 +731,7 @@ namespace Teste_de_funcionalidades
                 }
                 catch
                 {
-                    MessageBox.Show("P·gina de login n„o encontrada");
+                    MessageBox.Show("P√°gina de login n√£o encontrada");
                 }
 
             }
@@ -755,7 +755,7 @@ namespace Teste_de_funcionalidades
                 //}
                 //catch
                 //{
-                //    MessageBox.Show("P·gina de login n„o encontrada");
+                //    MessageBox.Show("P√°gina de login n√£o encontrada");
                 //}
                 //js.ExecuteScript("window.open('http://aplicacoes.socin.com.br/main.html');");
 
@@ -787,7 +787,7 @@ namespace Teste_de_funcionalidades
             else
             {
 
-                // Abre uma nova aba e navega para a p·gina 2
+                // Abre uma nova aba e navega para a p√°gina 2
                 IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
                 js.ExecuteScript("window.open('https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.80-installer.msi');");
 
@@ -800,7 +800,7 @@ namespace Teste_de_funcionalidades
         {
             IWebDriver driver = new ChromeDriver();
 
-            // Navega atÈ o site
+            // Navega at√© o site
             driver.Navigate().GoToUrl("http://aplicacoes.socin.com.br/login.html?lang=portuguese");
 
             // Encontra os campos de login e senha e insere os valores
@@ -810,14 +810,14 @@ namespace Teste_de_funcionalidades
             IWebElement campoSenha = driver.FindElement(By.Id("password_val"));
             campoSenha.SendKeys("TTF6DRTFb9");
 
-            // Encontra o bot„o de login pela classe e clica nele
+            // Encontra o bot√£o de login pela classe e clica nele
             IWebElement botaoLogin = driver.FindElement(By.CssSelector(".button.is-info.is-fullwidth"));
             botaoLogin.Click();
 
-            // Aguarda atÈ que a p·gina seja carregada
+            // Aguarda at√© que a p√°gina seja carregada
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
 
-            // Navega para uma p·gina especÌfica apÛs o login
+            // Navega para uma p√°gina espec√≠fica ap√≥s o login
             driver.Navigate().GoToUrl("http://aplicacoes.socin.com.br/main.html");
         }
 
@@ -836,7 +836,7 @@ namespace Teste_de_funcionalidades
             else
             {
 
-                // Abre uma nova aba e navega para a p·gina 2
+                // Abre uma nova aba e navega para a p√°gina 2
                 IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
                 js.ExecuteScript("window.open('https://mt.lv/winbox64');");
 
@@ -861,7 +861,7 @@ namespace Teste_de_funcionalidades
             else
             {
 
-                // Abre uma nova aba e navega para a p·gina 2
+                // Abre uma nova aba e navega para a p√°gina 2
                 IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
                 js.ExecuteScript("window.open('https://telegra.ph/raphanet-12-12');");
 
